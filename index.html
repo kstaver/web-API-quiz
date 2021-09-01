@@ -1,9 +1,51 @@
 <!DOCTYPE html>
 <html lang ="en">
     <head>
+        <link rel = "icon" type = "image/png" href = "./assets/image/brain-code-logo.jpg" />
+        <meta charset = "UTF-8" />
+        <meta name = "viewpoint" content = "width = device-width, initial-scale = 1.0" />
+        <meta http-equiv = "X-UA-Compatible" content = "ie = edge" />
+        <title>Mini Programming Quiz</title>
 
+        <link rel = "stylesheet" href = "./CSS/style.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
     </head>
+
     <body>
+
+        <div class = "scores"><a href = "score.html"> View High Scores</a></div>
+        <div class = "timer"> Time: <span id = " time">0</span></div>
+
+        <div class = "wrapper">
+            <div id = "start-screen" class = "start">
+                <h1> Programming Quiz Challenge</h1>
+                <p>
+                    Welcome to my mini quiz on programming. Please feel free to test your knowledge by clicking the start quiz button.
+                    All of the highest scores are recorded and on display until someone clears. Good luck!
+                </p>
+                <button id = "start">Start Quiz</button>
+            </div>
         
+            <div id = "questions" class = "hide">
+                <h2 id = "question-title"></h2>
+                <div id = "choices" class = "choices"></div>
+            </div>
+
+            <div id = "end-screen" class = "hide">
+                <h2> You have finished the quiz. </h2>
+                <p> Your final score is <span id = "final-score"></span>.</p>
+                <p>
+                    Enter your initials: <input type = "text" id = "initials" max = "3" />
+                    <button id = "submit">Submit</button>
+                </p>
+            </div>
+
+            <div id = "feedback" class = "feedback hide"></div>
+        </div>
+
+        <script src = "./JS/questions.js"></script>
+        <script src = "./JS/script.js"></script>
     </body>
 </html>
