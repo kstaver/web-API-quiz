@@ -13,12 +13,12 @@ function displayHighScores(){
     highScores.forEach(function(score){
 
         // Tag assignment
-        var highScoresTag = document.createElement("highScoresTag");
-        highScoresTag.textContent = score.initials + " - " + score.score;
+        var highScoresListTag = document.createElement("highScoresList");
+        highScoresListTag.textContent = score.initials + " - " + score.score;
 
         // Display tags
         var displayHighScoresEl = document.getElementById("highScores");
-        displayHighScoresEl.appendChild(highScoresTag);
+        displayHighScoresEl.appendChild(highScoresListTag);
     });
 }
 
