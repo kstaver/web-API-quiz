@@ -1,4 +1,3 @@
-
 function printHighscores() {
 
   var highscores = JSON.parse(window.localStorage.getItem("highscores")) || [];
@@ -25,4 +24,3 @@ function clearHighscores() {
 document.getElementById("clear").onclick = clearHighscores;
 
 printHighscores();
-
