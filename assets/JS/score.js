@@ -21,6 +21,6 @@ function clearHighscores() {
   window.location.reload();
 }
 
-document.getElementById("clear").onclick = clearHighscores;
+document.getElementById("clear").onclick = clearHighscores; //clear
 
 printHighscores();
