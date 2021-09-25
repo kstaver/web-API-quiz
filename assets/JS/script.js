@@ -5,10 +5,11 @@ var submitBtn = document.querySelector("#submit");
 var startBtn = document.querySelector("#start");
 var initialsEl = document.querySelector("#initials");
 var feedbackEl = document.querySelector("#feedback");
-
+  
 var currentQuestionIndex = 0;
 var time = questions.length * 15;
 var timerId;
+
 
 function startQuiz() {
 
@@ -34,7 +35,7 @@ function getQuestion() {
   choicesEl.innerHTML = "";
 
   currentQuestion.choices.forEach(function(choice, i) {
-
+  
     var choiceNode = document.createElement("button");
     choiceNode.setAttribute("class", "choice");
     choiceNode.setAttribute("value", choice);
@@ -95,7 +96,7 @@ function quizEnd() {
 }
 
 function clockTick() {
- 
+
   time--;
   timerEl.textContent = time;
 
@@ -109,9 +110,9 @@ function saveHighscore() {
   var initials = initialsEl.value.trim();
 
   if (initials !== "") {
-  
+
     var highscores =
-      JSON.parse(window.localStorage.getItem("highscores")) || [];
+      JSON.parse(localStorage.getItem("highscores")) || [];
 
     var newScore = {
       score: time,
@@ -119,9 +120,9 @@ function saveHighscore() {
     };
 
     highscores.push(newScore);
-    window.localStorage.setItem("highscores", JSON.stringify(highscores));
+    localStorage.setItem("highscores", JSON.stringify(highscores));
 
-    window.location.href = "score.html";
+    location.href = "score.html";
   }
 }
 

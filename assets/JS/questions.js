@@ -25,4 +25,3 @@ var questions = [
         answer: "JavaScript"
     }
 ];
-  
